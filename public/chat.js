@@ -78,7 +78,8 @@ function borraPdeActions(usuario){
 }
 
 function pintarMensjaeUnico(data){
+    let fecha= new Date(data.created_at);
     return `<p>
-    <strong>${data.autor}:</strong> ${data.msg} <small>${data.created_at.substring(11,19)}<small>
+    <strong>${data.autor}:</strong> ${data.msg} <small>${fecha.toLocaleDateString()} - ${fecha.toLocaleTimeString()}<small>
     </p>`;
 }

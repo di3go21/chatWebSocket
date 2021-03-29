@@ -34,6 +34,8 @@ const IO = SocketIO(server);
 
 // lógica web socket, para cada conexion se instancia el objeto socket
 IO.on("connection",async (socket)=>{
+    console.log(Date.now())
+    socket.to("asdasd").emit("ss","locoooo")
     console.log("nueva conexion",socket.id);
 
     //en cada conexion recuperamos los mensajes existentes
